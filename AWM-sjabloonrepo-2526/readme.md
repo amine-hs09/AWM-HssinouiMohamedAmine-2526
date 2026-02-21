@@ -1,7 +1,7 @@
 # AWM-VoornaamNaam-2526
 
 * Jaar : 2025-2026
-* Naam : **SCHRIJF HIER JE EIGEN NAAM**
+* Naam : **HSSINOUI MOHAMED AMINE **
 * [logboek](logboek.md)
 
 ## Linken

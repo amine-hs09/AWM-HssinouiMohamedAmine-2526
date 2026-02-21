@@ -3,12 +3,11 @@ fun main() {
     val secondNumber = 5
     val thirdNumber = 8
     
-    val additionResult = add(firstNumber, secondNumber)
-    println("$firstNumber + $secondNumber = $additionResult")
-    
+    val result = add(firstNumber, secondNumber)
+    val anotherResult = subtract(firstNumber, thirdNumber)
 
-    val subtractResult = subtract(firstNumber, thirdNumber)
-    println("$firstNumber - $thirdNumber = $subtractResult")
+    println("$firstNumber + $secondNumber = $result")
+    println("$firstNumber - $thirdNumber = $anotherResult")
 }
 
 fun add(a: Int, b: Int): Int {
