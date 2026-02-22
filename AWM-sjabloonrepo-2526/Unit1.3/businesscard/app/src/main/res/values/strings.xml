@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="user_full_name">Amine Hssinoui</string>
+    <string name="user_job_title">Junior Android Developer</string>
+    <string name="user_phone">0488445038</string>
+    <string name="user_email">mhssinoui@gmail.com</string>
+    <string name="user_share">mohamed@gmail.com</string>
+</resources>
