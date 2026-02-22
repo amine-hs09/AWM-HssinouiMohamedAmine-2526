@@ -1,124 +1,127 @@
-package com.example.businesscard // Hier zeg ik dat dit bestand hoort bij mijn businesscard pakket
+package com.example.businesscard
 
-import android.os.Bundle // Ik importeer Bundle om data door te geven aan de activity
-import androidx.activity.ComponentActivity // Ik gebruik dit als basis voor mijn scherm
-import androidx.activity.compose.setContent // Hiermee kan ik mijn eigen design (Compose) op het scherm zetten
-import androidx.compose.foundation.Image // Nodig om plaatjes te laten zien
-import androidx.compose.foundation.layout.* // Om alles netjes op zijn plek te zetten (zoals marges en grootte)
-import androidx.compose.material.icons.Icons // Ik gebruik de standaard icoontjes van Google
-import androidx.compose.material.icons.filled.Email // Specifiek icoontje voor e-mail
-import androidx.compose.material.icons.filled.Phone // Specifiek icoontje voor telefoon
-import androidx.compose.material.icons.filled.Share // Specifiek icoontje voor delen
-import androidx.compose.material3.Icon // Om de icoontjes daadwerkelijk te tekenen
-import androidx.compose.material3.MaterialTheme // Voor de algemene stijl van de app
-import androidx.compose.material3.Surface // Een basislaag waar ik alles op leg
-import androidx.compose.material3.Text // Om tekst te kunnen schrijven
-import androidx.compose.runtime.Composable // Zegt tegen Android dat dit een design-functie is
-import androidx.compose.ui.Alignment // Om dingen in het midden of aan de kant te zetten
-import androidx.compose.ui.Modifier // Mijn gereedschapskist om elementen aan te passen (grootte, kleur, etc.)
-import androidx.compose.ui.graphics.Color // Om kleuren te kiezen
-import androidx.compose.ui.graphics.vector.ImageVector // Type voor mijn icoontjes
-import androidx.compose.ui.res.painterResource // Om plaatjes uit mijn mapje 'res' te laden
-import androidx.compose.ui.res.stringResource // Om tekst uit mijn 'strings.xml' te halen
-import androidx.compose.ui.tooling.preview.Preview // Zodat ik het design kan zien in Android Studio
-import androidx.compose.ui.unit.dp // Maateenheid voor afstand
-import androidx.compose.ui.unit.sp // Maateenheid voor tekstgrootte
-import com.example.businesscard.ui.theme.BusinesscardTheme // Mijn eigen thema voor de app
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.businesscard.ui.theme.BusinesscardTheme
 
-class MainActivity : ComponentActivity() { // Dit is de 'motor' van mijn app-scherm
-    override fun onCreate(savedInstanceState: Bundle?) { // Dit gebeurt er als de app opstart
-        super.onCreate(savedInstanceState) // Start de standaard dingen van Android op
-        setContent { // Hier begin ik mijn design te bouwen
-            BusinesscardTheme { // Ik pas mijn eigen kleuren en stijl toe
-                Surface( // Ik maak een achtergrondvlak
-                    modifier = Modifier.fillMaxSize(), // Het moet het hele scherm vullen
-                    color = Color(0xFF001F3F) // Ik kies een hele donkerblauwe kleur
+// THEORIE: Klassen (MainActivity) beginnen met een HOOFDLETTER. Dit is de motor van mijn scherm.
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        
+        // LAMBDA: De { } hieronder is een 'lambda parameter'. Alles hierbinnen wordt uitgevoerd door setContent.
+        setContent {
+            BusinesscardTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(), // MODIFIER: Hiermee bepaal ik HOE een element eruit ziet (hier: schermvullend).
+                    color = Color(0xFF001F3F) // Mijn donkerblauwe kleur
                 ) {
-                    VisiteKaartje() // Ik roep mijn functie aan die het kaartje tekent
+                    VisiteKaartje()
                 }
             }
         }
     }
 }
 
-@Composable // Dit is een stukje van mijn design
+// THEORIE: Composables beginnen met een HOOFDLETTER. Dit zijn mijn eigen herbruikbare bouwblokken.
+@Composable
 fun VisiteKaartje() {
-    Column( // Ik zet alles netjes onder elkaar
-        modifier = Modifier.fillMaxSize(), // Vul het hele scherm
-        horizontalAlignment = Alignment.CenterHorizontally, // Alles in het midden van links naar rechts
-        verticalArrangement = Arrangement.SpaceAround // Verdeel de ruimte mooi tussen boven en onder
+    // COLUMN: Dit gebruik ik om elementen VERTICAAL (onder elkaar) te stapelen.
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally, // Zet alles in het midden van links naar rechts
+        verticalArrangement = Arrangement.SpaceAround // Verdeel de witruimte gelijkmatig over de hoogte
     ) {
-        Column( // Een aparte kolom voor mijn naam en logo
-            horizontalAlignment = Alignment.CenterHorizontally // Alles in het midden zetten
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Image( // Hier toon ik mijn logo
-                painter = painterResource(id = R.drawable.android_logo), // Pak het android_logo plaatje
-                contentDescription = "Android Logo", // Voor blinden die de app gebruiken
-                modifier = Modifier // Ik pas het plaatje aan
-                    .height(120.dp) // 120 hoog maken
-                    .width(120.dp) // 120 breed maken
+            // R.drawable: 'R' is de grote index van mijn app. 'drawable' is de map met mijn plaatjes.
+            Image(
+                painter = painterResource(id = R.drawable.android_logo), 
+                contentDescription = "Logo",
+                modifier = Modifier.size(120.dp) // Hier zet ik de afbeelding op 120dp bij 120dp
             )
-            Text( // Mijn naam op het scherm
-                text = stringResource(R.string.user_full_name), // Haal Amine Hssinoui uit strings.xml
-                fontSize = 32.sp, // Lekker grote letters
-                color = Color.White // Witte kleur voor mijn naam
+            
+            // KOTLIN: De taal die ik hier schrijf is Kotlin, ontwikkeld door JetBrains.
+            Text(
+                text = stringResource(R.string.user_full_name), // Haal tekst uit de 'strings' XML
+                fontSize = 32.sp, // 'sp' gebruik ik altijd voor tekstgrootte
+                color = Color.White
             )
-            Text( // Mijn functie onder mijn naam
-                text = stringResource(R.string.user_job_title), // Haal de functie uit strings.xml
-                color = Color(0xFF00EEFF), // Dit is mijn 'elektrisch blauwe' kleur!
-                fontSize = 18.sp, // Iets kleinere letters
-                style = MaterialTheme.typography.labelLarge // Een mooie dikke stijl
+            
+            Text(
+                text = stringResource(R.string.user_job_title),
+                color = Color(0xFF00EEFF), // Mijn elektrische blauwe kleur
+                fontSize = 18.sp,
+                style = MaterialTheme.typography.labelLarge
             )
         }
 
-        Column( // Een aparte kolom voor mijn contactgegevens onderaan
-            modifier = Modifier.padding(bottom = 50.dp) // Een beetje ruimte van de onderkant
+        // ROW: Gebruik ik als ik elementen HORIZONTAAL (naast elkaar) wil zetten (zie ContactRij).
+        Column(
+            modifier = Modifier.padding(bottom = 50.dp)
         ) {
-            ContactRij( // Rij voor mijn telefoonnummer
-                icoon = Icons.Default.Phone, // Gebruik het telefoon-icoon
-                tekst = stringResource(R.string.user_phone) // Haal nummer uit strings.xml
-            )
-            ContactRij( // Rij voor mijn mail
-                icoon = Icons.Default.Email, // Gebruik het mail-icoon
-                tekst = stringResource(R.string.user_email) // Haal mail uit strings.xml
-            )
-            ContactRij( // Rij voor mijn share info
-                icoon = Icons.Default.Share, // Gebruik het share-icoon
-                tekst = stringResource(R.string.user_share) // Haal de link uit strings.xml
-            )
+            ContactRij(Icons.Default.Phone, stringResource(R.string.user_phone))
+            ContactRij(Icons.Default.Email, stringResource(R.string.user_email))
+            ContactRij(Icons.Default.Share, stringResource(R.string.user_share))
         }
     }
 }
 
-@Composable // Een hulpfunctie om een rij met een icoon en tekst te maken
+// THEORIE: Variabelen (zoals 'icoon' en 'tekst') beginnen met een kleine letter (camelCase).
+@Composable
 fun ContactRij(icoon: ImageVector, tekst: String) {
-    Row( // Zet icoon en tekst naast elkaar
-        modifier = Modifier // Aanpassingen aan de rij
-            .padding(8.dp) // Ruimte om de rij heen
-            .width(280.dp), // Ik geef het een vaste breedte voor nette uitlijning
-        verticalAlignment = Alignment.CenterVertically // Icoon en tekst op dezelfde hoogte zetten
+    Row(
+        modifier = Modifier.padding(8.dp).width(280.dp),
+        verticalAlignment = Alignment.CenterVertically // Lijn het icoon en de tekst netjes uit op de middenlijn
     ) {
-        Icon( // Teken het icoontje
-            imageVector = icoon, // Welk icoontje? (doorgegeven via de functie)
-            contentDescription = null, // Geen uitleg nodig voor screenreaders hier
-            tint = Color(0xFF00EEFF), // Geef het icoon mijn elektrisch blauwe kleur
-            modifier = Modifier.size(24.dp) // Maak het icoon 24 groot
+        Icon(
+            imageVector = icoon,
+            contentDescription = null,
+            tint = Color(0xFF00EEFF),
+            modifier = Modifier.size(24.dp)
         )
-        Text( // De tekst naast het icoon
-            text = tekst, // Welke tekst? (doorgegeven via de functie)
-            color = Color.White, // Altijd witte tekst
-            fontSize = 16.sp, // Normale grootte voor info
-            modifier = Modifier.padding(start = 20.dp) // Ruimte tussen icoon en tekst
+        Text(
+            text = tekst,
+            color = Color.White,
+            fontSize = 16.sp,
+            modifier = Modifier.padding(start = 20.dp) // Maak ruimte tussen het icoon en de tekst
         )
     }
 }
 
-@Preview(showBackground = true) // Hiermee zie ik mijn kaartje direct in de editor
+// ONTHOUDEN: 
+// 1. Modifier = Hoe het eruit ziet. 
+// 2. Column/Row = Waar het staat. 
+// 3. R. = Toegang tot mijn bestanden (res).
+// 4. Lambda { } = De inhoud van een functie doorgeven.
+@Preview(showBackground = true)
 @Composable
 fun KaartjePreview() {
-    BusinesscardTheme { // Gebruik het thema ook in de preview
-        Surface(color = Color(0xFF001F3F)) { // Met de blauwe achtergrond
-            VisiteKaartje() // Laat het kaartje zien
+    BusinesscardTheme {
+        Surface(color = Color(0xFF001F3F)) {
+            VisiteKaartje()
         }
     }
 }
