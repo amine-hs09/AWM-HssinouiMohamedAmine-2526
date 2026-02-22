@@ -9,6 +9,13 @@
 10/02/2026  Happy Birthday app afgewerkt (Images toevoegen, Box, Column, Modifiers). 2.0
 11/02/2026  Compose Practice Problems (Article, Task Manager, Quadrants). 2.0
 12/02/2026  Business Card app ontworpen en Unit 1 afgerond (Quiz). 2.0
+het begrijpen van float en alpa voor de opacity 
+
+mijn quisen zijn gemaakt met mhssinoui@gmail.com 
+de eerste heb ik een 9/10
+de tweede heb ik een 6/10
+de derdde heb ik een 9/10
+de meeste punten verlies ik bij merkeuzevragen.
 
 
 
