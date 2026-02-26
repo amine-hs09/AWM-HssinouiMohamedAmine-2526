@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         
-        // LAMBDA: De { } hieronder is een 'lambda parameter'. Alles hierbinnen wordt uitgevoerd door setContent.
+
         setContent {
             BusinesscardTheme {
                 Surface(
