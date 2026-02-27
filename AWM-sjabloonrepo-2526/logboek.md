@@ -17,9 +17,27 @@ de tweede heb ik een 6/10
 de derdde heb ik een 9/10
 de meeste punten verlies ik bij merkeuzevragen.
 
-## Week 2 : 8.5 uur 
+
+
+## Week 3 :
 25/02  ik ben met unit 2.1 bezig de theorie is veel en heb nog moeite met het begrijpen 2u
+26/02/2026  Unit 2.1 : Theorie & Oefeningen (6.0 uur)
+            - Grondige studie van Object-Oriented Programming (OOP).
+            - Oefeningen afgewerkt: Internet Profile, Foldable Phone, Special Auction.
+            - Focus op Null Safety: Safe Calls (?.), Elvis Operator (?:), en Inversion (!).
+            - Begrip van Inheritance: Superclasses (open) vs Subclasses (override).
+            - Syntax van Lambda's en Higher-order functions in de praktijk gebracht.
 
-
+27/02/2026  Unit 2.2: Interactieve Dice Roller App (6.0 uur)
+            - State Management: Gebruik van 'remember' en 'mutableStateOf' om de waarde van de dobbelsteen te bewaren.
+            - Recomposition: Begrip van hoe Compose de UI hertekent wanneer de state verandert.
+            - Event Handling: Klik-actie toegevoegd via een onClick Lambda op de Button.
+            - UI Design: Gebruik van Column, Image (painterResource) en Button.
+            - Imports: 'getValue' en 'setValue' toegevoegd voor de property delegate (by).
+            
+            - Complex State: Meerdere states beheerd met 'remember' en 'mutableIntStateOf' om de voortgang van de gebruiker bij te houden.
+            - Business Logic: Willekeurige logica toegevoegd met '.random()' om het aantal benodigde kliks (squeezes) te bepalen.
+            - UI Architecture: Gebruik van 'Scaffold' en 'TopAppBar' voor een professionele Material 3 lay-out.
+            - Reusability: Een herbruikbare Composable 'LemonTextAndImage' gemaakt om code-duplicatie te voorkomen.
 
 # Totale tijd besteed aan AW&M : xx uur
