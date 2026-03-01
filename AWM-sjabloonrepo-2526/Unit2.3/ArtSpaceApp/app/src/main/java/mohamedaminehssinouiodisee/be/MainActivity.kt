@@ -57,6 +57,7 @@ fun MijnPersoonlijkeGalerij(modifier: Modifier = Modifier) {
     val pic3 = R.drawable.rs4
     val pic4 = R.drawable.rs3
     val pic5 = R.drawable.s3
+    val pic6 = R.drawable.rsq8
 
     /**
      * STATE: Iedere waarde die na verloop van tijd kan veranderen.
@@ -104,11 +105,12 @@ fun MijnPersoonlijkeGalerij(modifier: Modifier = Modifier) {
                         // HERSAMENSTELLING (RECOMPOSITION): Wanneer we deze waarden aanpassen,
                         // worden de Composables opnieuw uitgevoerd met de nieuwe gegevens.
                         when (actueelBeeld) {
-                            pic1 -> { actueelBeeld = pic5; titelReferentie = R.string.s3; jaarReferentie = R.string.s3_year; beschrijvingReferentie = R.string.rs3_desc }
+                            pic1 -> { actueelBeeld = pic6; titelReferentie = R.string.rsq8; jaarReferentie = R.string.rsq8_year; beschrijvingReferentie = R.string.rsq8_desc }
                             pic2 -> { actueelBeeld = pic1; titelReferentie = R.string.rs6; jaarReferentie = R.string.rs6_year; beschrijvingReferentie = R.string.rs6_desc }
                             pic3 -> { actueelBeeld = pic2; titelReferentie = R.string.rs5; jaarReferentie = R.string.rs5_year; beschrijvingReferentie = R.string.rs5_desc }
                             pic4 -> { actueelBeeld = pic3; titelReferentie = R.string.rs4; jaarReferentie = R.string.rs4_year; beschrijvingReferentie = R.string.rs4_desc }
-                            else -> { actueelBeeld = pic4; titelReferentie = R.string.rs3; jaarReferentie = R.string.rs3_year; beschrijvingReferentie = R.string.rs3_desc }
+                            pic5 -> { actueelBeeld = pic4; titelReferentie = R.string.rs3; jaarReferentie = R.string.rs3_year; beschrijvingReferentie = R.string.rs3_desc }
+                            else -> { actueelBeeld = pic5; titelReferentie = R.string.s3; jaarReferentie = R.string.s3_year; beschrijvingReferentie = R.string.s3_desc }
                         }
                     },
                     onVolgende = {
@@ -117,6 +119,7 @@ fun MijnPersoonlijkeGalerij(modifier: Modifier = Modifier) {
                             pic2 -> { actueelBeeld = pic3; titelReferentie = R.string.rs4; jaarReferentie = R.string.rs4_year; beschrijvingReferentie = R.string.rs4_desc }
                             pic3 -> { actueelBeeld = pic4; titelReferentie = R.string.rs3; jaarReferentie = R.string.rs3_year; beschrijvingReferentie = R.string.rs3_desc }
                             pic4 -> { actueelBeeld = pic5; titelReferentie = R.string.s3; jaarReferentie = R.string.s3_year; beschrijvingReferentie = R.string.s3_desc }
+                            pic5 -> { actueelBeeld = pic6; titelReferentie = R.string.rsq8; jaarReferentie = R.string.rsq8_year; beschrijvingReferentie = R.string.rsq8_desc }
                             else -> { actueelBeeld = pic1; titelReferentie = R.string.rs6; jaarReferentie = R.string.rs6_year; beschrijvingReferentie = R.string.rs6_desc }
                         }
                     }
@@ -140,11 +143,12 @@ fun MijnPersoonlijkeGalerij(modifier: Modifier = Modifier) {
             NavigatieKnoppen(
                 onVorige = {
                     when (actueelBeeld) {
-                        pic1 -> { actueelBeeld = pic5; titelReferentie = R.string.s3; jaarReferentie = R.string.s3_year; beschrijvingReferentie = R.string.s3_desc }
+                        pic1 -> { actueelBeeld = pic6; titelReferentie = R.string.rsq8; jaarReferentie = R.string.rsq8_year; beschrijvingReferentie = R.string.rsq8_desc }
                         pic2 -> { actueelBeeld = pic1; titelReferentie = R.string.rs6; jaarReferentie = R.string.rs6_year; beschrijvingReferentie = R.string.rs6_desc }
                         pic3 -> { actueelBeeld = pic2; titelReferentie = R.string.rs5; jaarReferentie = R.string.rs5_year; beschrijvingReferentie = R.string.rs5_desc }
                         pic4 -> { actueelBeeld = pic3; titelReferentie = R.string.rs4; jaarReferentie = R.string.rs4_year; beschrijvingReferentie = R.string.rs4_desc }
-                        else -> { actueelBeeld = pic4; titelReferentie = R.string.rs3; jaarReferentie = R.string.rs3_year; beschrijvingReferentie = R.string.rs3_desc }
+                        pic5 -> { actueelBeeld = pic4; titelReferentie = R.string.rs3; jaarReferentie = R.string.rs3_year; beschrijvingReferentie = R.string.rs3_desc }
+                        else -> { actueelBeeld = pic5; titelReferentie = R.string.s3; jaarReferentie = R.string.s3_year; beschrijvingReferentie = R.string.s3_desc }
                     }
                 },
                 onVolgende = {
@@ -153,6 +157,7 @@ fun MijnPersoonlijkeGalerij(modifier: Modifier = Modifier) {
                         pic2 -> { actueelBeeld = pic3; titelReferentie = R.string.rs4; jaarReferentie = R.string.rs4_year; beschrijvingReferentie = R.string.rs4_desc }
                         pic3 -> { actueelBeeld = pic4; titelReferentie = R.string.rs3; jaarReferentie = R.string.rs3_year; beschrijvingReferentie = R.string.rs3_desc }
                         pic4 -> { actueelBeeld = pic5; titelReferentie = R.string.s3; jaarReferentie = R.string.s3_year; beschrijvingReferentie = R.string.s3_desc }
+                        pic5 -> { actueelBeeld = pic6; titelReferentie = R.string.rsq8; jaarReferentie = R.string.rsq8_year; beschrijvingReferentie = R.string.rsq8_desc }
                         else -> { actueelBeeld = pic1; titelReferentie = R.string.rs6; jaarReferentie = R.string.rs6_year; beschrijvingReferentie = R.string.rs6_desc }
                     }
                 }

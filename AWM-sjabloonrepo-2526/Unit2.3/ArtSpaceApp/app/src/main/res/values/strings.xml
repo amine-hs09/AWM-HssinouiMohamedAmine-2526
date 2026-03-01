@@ -19,4 +19,8 @@
     <string name="s3">Audi S3</string>
     <string name="s3_year">2023</string>
     <string name="s3_desc">Sportiviteit in een compact formaat.</string>
+
+    <string name="rsq8">Audi RS Q8</string>
+    <string name="rsq8_year">2024</string>
+    <string name="rsq8_desc">De koning van de sportieve SUV\'s.</string>
 </resources>
