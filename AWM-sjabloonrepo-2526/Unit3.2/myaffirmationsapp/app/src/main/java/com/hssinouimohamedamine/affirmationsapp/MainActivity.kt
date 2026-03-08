@@ -78,7 +78,7 @@ fun AffirmationList(affirmationList: List<Affirmations>, modifier: Modifier = Mo
     LazyColumn(modifier = modifier) {
         items(affirmationList) { affirmation ->
             AffirmationCard(
-                //affirmation link = nom variable de affirmationcard
+                //affirmation link = nom variable de affirmationcardrr
                 //affirmation a droite la variable qui a la vrai fiche de la variable
                 affirmation = affirmation,
                 modifier = Modifier.padding(5.dp)
