@@ -25,6 +25,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.hssinouimohamedamine.affirmationsapp.R
 import com.hssinouimohamedamine.affirmationsapp.data.Affirmations
 import com.hssinouimohamedamine.affirmationsapp.data.Datasource
 import com.hssinouimohamedamine.affirmationsapp.ui.theme.AffirmationsappTheme
@@ -48,9 +49,10 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-//affiramtion = nom de vraible  nom de
-// letiquette a la fiche  pour utilser dans affirmation.imageresourceid
-// :Afirmation =  nom du data class
+/**
+ * Affiche une carte d'affirmation avec une image et un texte.
+ * @param affirmation L'objet de données contenant les IDs de ressources.
+ */
 fun AffirmationCard(affirmation: Affirmations, modifier: Modifier = Modifier) {
     Card(modifier = modifier) {
         Column {
@@ -63,7 +65,7 @@ fun AffirmationCard(affirmation: Affirmations, modifier: Modifier = Modifier) {
                 contentScale = ContentScale.Crop
             )
             Text(
-                // transforme le r;string en texte
+                // Transforme l'ID de ressource R.string en texte réel
                 text = LocalContext.current.getString(affirmation.stringResourceId),
                 modifier = Modifier.padding(16.dp),
                 style = MaterialTheme.typography.headlineSmall
@@ -73,13 +75,13 @@ fun AffirmationCard(affirmation: Affirmations, modifier: Modifier = Modifier) {
 }
 
 @Composable
-// List<Affirmations> et le nom generic de affiarmation dans function affirmationcard
+/**
+ * Affiche une liste déroulante de cartes d'affirmation.
+ */
 fun AffirmationList(affirmationList: List<Affirmations>, modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
         items(affirmationList) { affirmation ->
             AffirmationCard(
-                //affirmation link = nom variable de affirmationcardrr
-                //affirmation a droite la variable qui a la vrai fiche de la variable
                 affirmation = affirmation,
                 modifier = Modifier.padding(5.dp)
             )
