@@ -48,6 +48,9 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
+//affiramtion = nom de vraible  nom de
+// letiquette a la fiche  pour utilser dans affirmation.imageresourceid
+// :Afirmation =  nom du data class
 fun AffirmationCard(affirmation: Affirmations, modifier: Modifier = Modifier) {
     Card(modifier = modifier) {
         Column {
@@ -60,6 +63,7 @@ fun AffirmationCard(affirmation: Affirmations, modifier: Modifier = Modifier) {
                 contentScale = ContentScale.Crop
             )
             Text(
+                // transforme le r;string en texte
                 text = LocalContext.current.getString(affirmation.stringResourceId),
                 modifier = Modifier.padding(16.dp),
                 style = MaterialTheme.typography.headlineSmall
@@ -69,10 +73,13 @@ fun AffirmationCard(affirmation: Affirmations, modifier: Modifier = Modifier) {
 }
 
 @Composable
+// List<Affirmations> et le nom generic de affiarmation dans function affirmationcard
 fun AffirmationList(affirmationList: List<Affirmations>, modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
         items(affirmationList) { affirmation ->
             AffirmationCard(
+                //affirmation link = nom variable de affirmationcard
+                //affirmation a droite la variable qui a la vrai fiche de la variable
                 affirmation = affirmation,
                 modifier = Modifier.padding(5.dp)
             )
