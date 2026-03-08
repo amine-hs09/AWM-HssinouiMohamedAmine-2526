@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-//oke
+
 @Composable
 fun TopicGrid() {
     LazyVerticalGrid(columns = GridCells.Fixed(2), modifier = Modifier.padding(8.dp)) {
