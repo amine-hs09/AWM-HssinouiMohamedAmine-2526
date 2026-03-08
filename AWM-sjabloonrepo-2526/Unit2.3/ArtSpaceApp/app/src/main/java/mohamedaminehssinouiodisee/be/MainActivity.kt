@@ -59,11 +59,7 @@ fun MijnPersoonlijkeGalerij(modifier: Modifier = Modifier) {
     val pic5 = R.drawable.s3
     val pic6 = R.drawable.rsq8
 
-    /**
-     * STATE: Iedere waarde die na verloop van tijd kan veranderen.
-     * REMEMBER & MUTABLESTATEOF: Standaard is een Composable stateless (state wordt gereset bij recomposition).
-     * We gebruiken 'remember' om de state te behouden over verschillende recompositions heen.
-     */
+
     var actueelBeeld by remember { mutableIntStateOf(pic1) }
     var titelReferentie by remember { mutableIntStateOf(R.string.rs6) }
     var jaarReferentie by remember { mutableIntStateOf(R.string.rs6_year) }
@@ -97,8 +93,7 @@ fun MijnPersoonlijkeGalerij(modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(32.dp))
 
                 /**
-                 * STATE HOISTING: Het verplaatsen van state naar een hogere plaats (hier).
-                 * NavigatieKnoppen is hierdoor 'stateless' omdat we de state en events (onClick) doorgeven.
+                 * STATE HOISTIN
                  */
                 NavigatieKnoppen(
                     onVorige = {

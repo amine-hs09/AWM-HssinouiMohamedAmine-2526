@@ -39,5 +39,21 @@ de meeste punten verlies ik bij merkeuzevragen.
             - Business Logic: Willekeurige logica toegevoegd met '.random()' om het aantal benodigde kliks (squeezes) te bepalen.
             - UI Architecture: Gebruik van 'Scaffold' en 'TopAppBar' voor een professionele Material 3 lay-out.
             - Reusability: Een herbruikbare Composable 'LemonTextAndImage' gemaakt om code-duplicatie te voorkomen.
+28/02/2026  Unit 2.3: Theorie State & Recomposition 3.5
+            - Grondige herhaling van de theorie: Compositie, Initiële compositie en Hersamenstelling.
+            - Diepgaand begrip van Stateful (met interne state) vs Stateless composables.
+            - Het concept van 'State Hoisting' bestudeerd: state omhoog verplaatsen naar de parent en events via lambda's (`() -> Unit`) naar beneden doorgeven om herbruikbare UI-componenten te maken.
 
+02/03/2026  Unit 2.3: Project Art Space App 6.0
+            - Eigen Art Space app gebouwd met een galerij van Audi auto's.
+            - Complexe lay-out gemaakt met `Column`, `Row`, `Box` en geneste modifiers.
+            - Navigatie toegevoegd (Vorige/Volgende knoppen) met een stateless component en 'State Hoisting'.
+            - UI geoptimaliseerd voor zowel landschap- als portretmodus met behulp van `LocalConfiguration.current.orientation`.
+            - Voorbereiding mondeling examen: code lijn per lijn geanalyseerd en gekoppeld aan de theorie.
+
+05/03/2026  Unit 3.1: Meer Kotlin fundamentals - Theorie 4.0
+            - Generics (`<T>`) bestudeerd voor flexibele datatypes.
+            - Leren werken met `enum class` en `data class` (automatische functies zoals copy/toString).
+            - Het concept van Singletons (`object` en `companion object`) toegepast.
+            - Interfaces (contracten zonder implementatie) en extension properties/methodes bestudeerd.
 # Totale tijd besteed aan AW&M : xx uur
