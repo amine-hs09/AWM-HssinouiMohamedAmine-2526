@@ -56,4 +56,24 @@ de meeste punten verlies ik bij merkeuzevragen.
             - Leren werken met `enum class` en `data class` (automatische functies zoals copy/toString).
             - Het concept van Singletons (`object` en `companion object`) toegepast.
             - Interfaces (contracten zonder implementatie) en extension properties/methodes bestudeerd.
+            06/03/2026  Unit 3.1: Meer Kotlin fundamentals - Praktijk & Collections
+- Praktische oefeningen gemaakt met enum class (strikte keuzemenu's) en data class (modellen).
+- Werken met Collections: verschil tussen read-only (List) en aanpasbaar (MutableList).
+- Data getransformeerd en gecategoriseerd (van List naar Map) met Higher-order functies.
+- Diepgaand gebruik van functies zoals .filter { ... }, .groupBy { ... }, .last() en het gebruik van de impliciete parameter it.
+- Extension properties in de praktijk toegepast (bijv. Event.durationOfEvent) met custom get().
+
+07/03/2026  Unit 3.2: Affirmations App - Scrollbare lijsten (LazyColumn)
+- Architectuur toegepast: scheiding van data (Model) en gebruikersinterface (UI).
+- Lijst met data weergegeven via een LazyColumn voor optimale prestaties (rendert alleen zichtbare items).
+- Gebruik gemaakt van de items(lijst) functie met een trailing lambda om over data te itereren en UI-componenten (AffirmationCard) te genereren.
+- Beveiliging van resource-ID's gegarandeerd door middel van @StringRes en @DrawableRes annotaties.
+- Code leesbaarder gemaakt door gebruik van benoemde parameters (named arguments, bv. affirmation = affirmation).
+
+08/03/2026  Unit 3.2: Course Grid App - Geavanceerde Grids & Indexering
+- Project 'Course Grid' gebouwd met een LazyVerticalGrid om data in een raster weer te geven.
+- Kolommen vastgezet via columns = GridCells.Fixed(2).
+- Het Singleton-patroon (object DataSource) geïmplementeerd voor geheugenoptimalisatie van de datalijst.
+- Een alternatieve iteratiemethode toegepast: items(size) { index -> ... } waarbij de data handmatig uit de lijst wordt gehaald via de [index].
+- Mondeling examen voorbereid: het verschil uitgelegd tussen itereren via het object zelf vs. itereren via de index.
 # Totale tijd besteed aan AW&M : xx uur
