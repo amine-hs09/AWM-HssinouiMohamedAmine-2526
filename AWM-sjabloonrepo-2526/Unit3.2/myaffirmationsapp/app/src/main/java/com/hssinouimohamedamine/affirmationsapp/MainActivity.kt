@@ -101,7 +101,7 @@ fun AffirmationsApp() {
 private fun AffirmationCardPreviewCard1() {
     AffirmationCard(Affirmations(R.string.affirmation1, R.drawable.image1))
 }
-
+//cv
 @Preview
 @Composable
 private fun AffirmationCardPreviewCard2() {
