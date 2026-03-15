@@ -63,7 +63,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// Fonction principale de l'application Woof
+// Fonction principale de l'application Woof tu dit entre chaque cadre de composant une ligne blanche
 @Composable
 fun WoofApp() {
     Scaffold(
@@ -83,7 +83,7 @@ fun WoofApp() {
     }
 }
 
-// Barre d'application supérieure
+// Barre d'application supérieure en haut titre et logo
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WoofTopAppBar(modifier: Modifier = Modifier){
