@@ -8,7 +8,6 @@ import androidx.annotation.StringRes
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -33,6 +32,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -55,7 +55,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            // AppTheme : Définit les couleurs, la police et les formes de toute l'application
             AppTheme {
+                // Surface : Le conteneur de base qui gère la couleur de fond
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -69,15 +71,18 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun CarsApp() {
+    // Scaffold : Structure de base de l'écran (TopBar, BottomBar, Content)
     Scaffold(
         topBar = {
             CarsTopAppBar()
         }
-    ) { it ->
-        LazyColumn(contentPadding = it) {
-            items(CarsRepository.cars) {
+    ) { paddingValues ->
+        // LazyColumn : Liste performante qui ne charge que ce qui est visible à l'écran
+        LazyColumn(contentPadding = paddingValues) {
+            // items : Boucle sur la liste de données pour créer chaque élément
+            items(CarsRepository.cars) { car ->
                 CarItem(
-                    car = it,
+                    car = car,
                     modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
                 )
             }
@@ -95,14 +100,20 @@ fun CarsTopAppBar(modifier: Modifier = Modifier){
                     imageVector = Icons.Filled.DirectionsCar,
                     contentDescription = null,
                     modifier = Modifier.size(32.dp).padding(end = 8.dp),
-                    tint = MaterialTheme.colorScheme.primary
+                    // tint : Applique une couleur à l'icône (ici onPrimary = blanc ou noir selon le thème)
+                    tint = MaterialTheme.colorScheme.onPrimary
                 )
                 Text(
                     text = stringResource(R.string.app_name),
-                    style = MaterialTheme.typography.displayLarge
+                    style = MaterialTheme.typography.displayLarge,
+                    color = MaterialTheme.colorScheme.onPrimary
                 )
             }
         },
+        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+            // containerColor : Définit la couleur de fond de la TopBar
+            containerColor = MaterialTheme.colorScheme.primary
+        ),
         modifier = modifier
     )
 }
@@ -112,18 +123,17 @@ fun CarItem(
     car: Car,
     modifier: Modifier = Modifier
 ) {
+    // remember + mutableStateOf : Garde en mémoire si la carte est ouverte ou fermée
     var expanded by remember { mutableStateOf(false) }
+
     Card(
-        modifier = modifier,
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainer
-        )
+        modifier = modifier
     ) {
         Column(
             modifier = Modifier
+                // animateContentSize : Anime automatiquement le changement de taille (ouverture/fermeture)
                 .animateContentSize(
+                    // spring : Définit le style de l'animation (ici "ressort" sans rebond)
                     animationSpec = spring(
                         dampingRatio = Spring.DampingRatioNoBouncy,
                         stiffness = Spring.StiffnessMedium
@@ -137,12 +147,14 @@ fun CarItem(
             ) {
                 CarIcon(car.imageRes)
                 CarInformation(car.dayRes, car.nameRes)
+                // Spacer + weight(1f) : Pousse tout ce qui suit vers la droite (le bouton)
                 Spacer(Modifier.weight(1f))
                 CarItemButton(
                     expanded = expanded,
                     onClick = { expanded = !expanded },
                 )
             }
+            // Condition if (expanded) : Affiche la description seulement si expanded est vrai
             if (expanded) {
                 CarDescription(
                     car.descriptionRes,
@@ -167,11 +179,13 @@ private fun CarItemButton(
     IconButton(
         onClick = onClick,
         modifier = modifier
-    ){
+    ) {
         Icon(
+            // Change l'icône selon l'état expanded (Flèche haut ou bas)
             imageVector = if (expanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
-            contentDescription = stringResource(R.string.expand_button_content_description),
-            tint = MaterialTheme.colorScheme.primary
+            contentDescription = null,
+            // tint : Applique une couleur (ici la couleur secondaire / Rouge AMG)
+            tint = MaterialTheme.colorScheme.secondary
         )
     }
 }
@@ -186,8 +200,7 @@ fun CarDescription(
     ) {
         Text(
             text = stringResource(R.string.about),
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.primary
+            style = MaterialTheme.typography.labelSmall
         )
         Text(
             text = stringResource(carDesc),
@@ -203,10 +216,12 @@ fun CarIcon(
 ) {
     Image(
         modifier = modifier
-            .size(100.dp)
+            .size(64.dp)
             .padding(dimensionResource(id = R.dimen.padding_small))
-            .clip(MaterialTheme.shapes.medium),
+            // clip : Découpe l'image (arrondit les bords) selon les formes du thème
+            .clip(MaterialTheme.shapes.small),
         painter = painterResource(carIcon),
+        // ContentScale.Crop : Recadre l'image pour remplir le cadre sans la déformer (indispensable !)
         contentScale = ContentScale.Crop,
         contentDescription = null
     )
@@ -221,12 +236,13 @@ fun CarInformation(
     Column(modifier = modifier) {
         Text(
             text = stringResource(carDay),
-            style = MaterialTheme.typography.labelMedium,
+            style = MaterialTheme.typography.displayMedium,
+            // color : Utilise la couleur secondaire (Rouge AMG) pour le jour
             color = MaterialTheme.colorScheme.secondary
         )
         Text(
             text = stringResource(carName),
-            style = MaterialTheme.typography.headlineSmall
+            style = MaterialTheme.typography.bodyLarge
         )
     }
 }
@@ -234,7 +250,7 @@ fun CarInformation(
 @Preview
 @Composable
 fun CarsPreview() {
-    AppTheme(darkTheme = false ) {
+    AppTheme {
         CarsApp()
     }
 }

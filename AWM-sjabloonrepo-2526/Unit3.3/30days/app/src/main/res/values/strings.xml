@@ -1,37 +1,49 @@
 <resources>
-    <string name="app_name">10 Days of Cars</string>
-    <string name="day1">Jour 1</string>
-    <string name="day2">Jour 2</string>
-    <string name="day3">Jour 3</string>
-    <string name="day4">Jour 4</string>
-    <string name="day5">Jour 5</string>
-    <string name="day6">Jour 6</string>
-    <string name="day7">Jour 7</string>
-    <string name="day8">Jour 8</string>
-    <string name="day9">Jour 9</string>
-    <string name="day10">Jour 10</string>
+    <string name="app_name">10 Dagen Mercedes-Benz</string>
 
-    <string name="car1_name">Ferrari F40</string>
-    <string name="car1_desc">Une légende des années 80 avec un moteur V8 biturbo.</string>
-    <string name="car2_name">Porsche 911 GT3</string>
-    <string name="car2_desc">La quintessence de la sportive allemande, précise et puissante.</string>
-    <string name="car3_name">Lamborghini Aventador</string>
-    <string name="car3_desc">Un design agressif et un moteur V12 atmosphérique hurlant.</string>
-    <string name="car4_name">Bugatti Chiron</string>
-    <string name="car4_desc">La démesure absolue avec plus de 1500 chevaux.</string>
-    <string name="car5_name">Tesla Model S Plaid</string>
-    <string name="car5_desc">L\'accélération électrique qui défie les lois de la physique.</string>
-    <string name="car6_name">McLaren 720S</string>
-    <string name="car6_desc">Une prouesse technologique venue de Woking.</string>
-    <string name="car7_name">Aston Martin DBS</string>
-    <string name="car7_desc">L\'élégance britannique alliée à une force brute.</string>
-    <string name="car8_name">Nissan GT-R</string>
-    <string name="car8_desc">Surnommée Godzilla pour ses performances dévastatrices.</string>
-    <string name="car9_name">Audi R8 V10</string>
-    <string name="car9_desc">Une supercar utilisable au quotidien avec une sonorité divine.</string>
-    <string name="car10_name">Ford Mustang GT500</string>
-    <string name="car10_desc">L\'American Muscle dans toute sa splendeur.</string>
+    <!-- Dagen -->
+    <string name="day1">Dag 1</string>
+    <string name="day2">Dag 2</string>
+    <string name="day3">Dag 3</string>
+    <string name="day4">Dag 4</string>
+    <string name="day5">Dag 5</string>
+    <string name="day6">Dag 6</string>
+    <string name="day7">Dag 7</string>
+    <string name="day8">Dag 8</string>
+    <string name="day9">Dag 9</string>
+    <string name="day10">Dag 10</string>
 
-    <string name="about">En savoir plus :</string>
-    <string name="expand_button_content_description">Afficher plus ou moins d\'infos.</string>
+    <!-- Mercedes Modellen -->
+    <string name="car1_name">Mercedes 35 HP</string>
+    <string name="car1_desc">Hier is je Mercedes voor dag 1. De eerste auto die de naam Mercedes droeg in 1901, een mijlpaal in de autogeschiedenis.</string>
+
+    <string name="car2_name">Mercedes-Benz 300 SL</string>
+    <string name="car2_desc">Hier is je Mercedes voor dag 2. Beroemd om zijn iconische vleugeldeuren; het was de snelste productieauto van zijn tijd.</string>
+
+    <string name="car3_name">Mercedes-Benz G-Klasse</string>
+    <string name="car3_desc">Hier is je Mercedes voor dag 3. Oorspronkelijk ontworpen als militair voertuig, nu een symbool van luxe en off-road kracht.</string>
+
+    <string name="car4_name">Mercedes-Benz S-Klasse</string>
+    <string name="car4_desc">Hier is je Mercedes voor dag 4. Deze auto introduceerde vaak als eerste nieuwe technologieën zoals ABS en airbags.</string>
+
+    <string name="car5_name">190E 2.5-16 Evolution II</string>
+    <string name="car5_desc">Hier is je Mercedes voor dag 5. Een legende uit de DTM-racerij met zijn enorme achtervleugel en brute kracht.</string>
+
+    <string name="car6_name">Mercedes-Benz SLR McLaren</string>
+    <string name="car6_desc">Hier is je Mercedes voor dag 6. Een unieke samenwerking tussen Mercedes en McLaren, geïnspireerd door de Formule 1.</string>
+
+    <string name="car7_name">Mercedes-AMG GT</string>
+    <string name="car7_desc">Hier is je Mercedes voor dag 7. De tweede sportwagen die volledig door AMG is ontwikkeld, puur rijplezier.</string>
+
+    <string name="car8_name">Mercedes-Benz EQS</string>
+    <string name="car8_desc">Hier is je Mercedes voor dag 8. De toekomst van luxe: volledig elektrisch en voorzien van het indrukwekkende Hyperscreen.</string>
+
+    <string name="car9_name">Mercedes-Benz 500E</string>
+    <string name="car9_desc">Hier is je Mercedes voor dag 9. In de jaren 90 gebouwd in samenwerking met Porsche, een echte wolf in schaapskleren.</string>
+
+    <string name="car10_name">Mercedes-AMG ONE</string>
+    <string name="car10_desc">Hier is je Mercedes voor dag 10. Formule 1-technologie voor de openbare weg met meer dan 1000 pk.</string>
+
+    <string name="about">Anekdote over deze Mercedes:</string>
+    <string name="expand_button_content_description">Toon meer of minder informatie over deze auto.</string>
 </resources>
