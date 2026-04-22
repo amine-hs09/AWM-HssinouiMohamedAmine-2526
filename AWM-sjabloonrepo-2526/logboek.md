@@ -76,4 +76,62 @@ de meeste punten verlies ik bij merkeuzevragen.
 - Het Singleton-patroon (object DataSource) geïmplementeerd voor geheugenoptimalisatie van de datalijst.
 - Een alternatieve iteratiemethode toegepast: items(size) { index -> ... } waarbij de data handmatig uit de lijst wordt gehaald via de [index].
 - Mondeling examen voorbereid: het verschil uitgelegd tussen itereren via het object zelf vs. itereren via de index.
-# Totale tijd besteed aan AW&M : xx uur
+
+14/03/2026  Unit 3.3: Superheroes App & Woof App - Material Design 3 Theming (5.0 uur)
+            - Superheroes App gebouwd: een lijst van superhelden weergeven met LazyColumn en Card-composables.
+            - Material Design 3 volledig toegepast: kleurenschema's (light/dark), typografie en vormgeving (Shape).
+            - CenterAlignedTopAppBar gebruikt voor een professionele navigatiebalk.
+            - Data class Hero aangemaakt met @StringRes en @DrawableRes annotaties voor type-safe resources.
+            - HeroesRepository als Singleton (object) geïmplementeerd voor centraal databeheer.
+            - Woof App: een lijst van honden met uitklapbare kaarten (expandable cards).
+            - Animatie toegepast met `animateContentSize()` voor vloeiende expand/collapse-effecten.
+            - Begrip van `@OptIn(ExperimentalMaterial3Api::class)` voor experimentele Material 3 componenten.
+
+15/03/2026  Unit 3.3: 30 Days App - Eigen Project met Theming (5.0 uur)
+            - Eigen '30 Days' app ontworpen en gebouwd als eindproject van Unit 3.
+            - Volledig eigen thema gecreëerd met aangepaste kleuren, typografie en vormen.
+            - Hergebruik van het geleerde patroon: data class, Repository (Singleton), LazyColumn en Card.
+            - Light en Dark theme ondersteund via Material 3 `isSystemInDarkTheme()`.
+            - Edge-to-edge UI geïmplementeerd met transparante status- en navigatiebalk.
+            - Preview-functies toegevoegd voor zowel light als dark mode met `@Preview` annotaties.
+
+--- PAUZE: Oogoperatie van 15/03 tot 13/04 - geen activiteit mogelijk 
+
+13/04/2026  Unit 4.1: Dessert Clicker - Activity Lifecycle & State Persistence (5.0 uur)
+            - Alle Activity Lifecycle callbacks bestudeerd en geïmplementeerd: onCreate, onStart, onResume, onRestart, onPause, onStop, onDestroy.
+            - Logging toegevoegd met `Log.d(TAG, ...)` om de levenscyclus in Logcat te volgen.
+            - State Persistence: `rememberSaveable` gebruikt om revenue en dessertsSold te bewaren bij configuratiewijzigingen (bijv. schermrotatie).
+            - Dynamische dessert-wissel logica geïmplementeerd: het getoonde dessert verandert automatisch op basis van het aantal verkopen.
+            - Intent-gebaseerde deelfunctionaliteit gebouwd met `ACTION_SEND` om verkoopresultaten te delen via andere apps.
+            - Verschil begrepen tussen `remember` (verliest state bij recomposition door configuratiewijziging) en `rememberSaveable` (bewaart state).
+
+14/04/2026  Unit 4.1: Unscramble - ViewModel & StateFlow (5.5 uur)
+            - MVVM-architectuur (Model-View-ViewModel) voor het eerst toegepast in een volledig project.
+            - GameViewModel aangemaakt met `StateFlow<GameUiState>` voor reactief state management.
+            - Verschil begrepen tussen `MutableStateFlow` (intern in ViewModel) en `StateFlow` (exposed naar UI via `.asStateFlow()`).
+            - Woorden-scramble logica geschreven: willekeurig schudden met `.toCharArray()`, `.shuffle()` en `.concatToString()`.
+            - Game flow beheerd: score bijhouden, gebruikte woorden tracken in een `MutableSet`, en game-over conditie na 10 woorden.
+            - UI gebouwd met `collectAsState()` om de StateFlow in Compose te observeren.
+            - Keyboard actions geïmplementeerd: `ImeAction.Done` op het tekstveld met `KeyboardActions` voor betere UX.
+
+15/04/2026  Unit 4.2: Cupcake App - Navigation met Jetpack Navigation Compose (5.0 uur)
+            - Jetpack Navigation Compose voor het eerst gebruikt: `NavHost`, `NavHostController` en `composable()` routes.
+            - Navigatie tussen 4 schermen opgezet: Start → Flavor → Pickup → Summary.
+            - Enum class `CupcakeScreen` gebruikt als type-safe route-definitie voor elke navigatiebestemming.
+            - Shared ViewModel: één `OrderViewModel` gedeeld over alle schermen via `viewModel()` in de NavHost.
+            - Terugnavigatie geïmplementeerd met `popBackStack()` en een aangepaste CupcakeAppBar met back-knop.
+            - Prijsberekening: basisprijs per cupcake ($2.00) + toeslag voor same-day pickup ($3.00).
+            - Datumopties dynamisch gegenereerd met `Calendar` en `SimpleDateFormat` voor de komende 4 dagen.
+            - Bestelling delen via `Intent.ACTION_SEND` met een geformatteerde samenvatting van de order.
+
+16/04/2026  Unit 4.2: Lunch Tray App - Geavanceerde Navigation & Sealed Classes (5.5 uur)
+            - Sealed class `MenuItem` geïmplementeerd met drie subtypes: `EntreeItem`, `SideDishItem`, `AccompanimentItem`.
+            - Voordeel van sealed classes begrepen: de compiler garandeert dat alle subtypes worden afgehandeld in `when`-expressies.
+            - 5-stappen navigatieflow gebouwd: Start → Entree → Side Dish → Accompaniment → Checkout.
+            - Herbruikbare `BaseMenuScreen` composable ontworpen die door alle menuschermen wordt gedeeld (DRY-principe).
+            - Belastingberekening (8% tax) geïmplementeerd in de ViewModel met een `formatPrice()` extension function.
+            - Cancel-functionaliteit: bij annulering wordt de hele bestelling gereset en navigeert de app terug naar Start.
+            - `getFormattedPrice()` methode in de sealed class gebruikt voor consistente prijsweergave met NumberFormat.
+
+
+22/04/2026  vergeten om mijn logboek in te vullen en mijn oefeningens te pushen op github 
