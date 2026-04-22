@@ -67,7 +67,7 @@ fun HeroesScreen() {
                 Spacer(modifier = Modifier.height(8.dp))
             }
         }
-    }
+    }// dynamycoloring
 }
 
 // Composant pour afficher un seul héros
@@ -141,4 +141,5 @@ fun HeroesScreenDarkPreview() {
             HeroesScreen()
         }
     }
+
 }
