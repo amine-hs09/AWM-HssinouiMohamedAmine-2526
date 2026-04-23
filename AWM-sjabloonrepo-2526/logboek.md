@@ -135,3 +135,4 @@ de meeste punten verlies ik bij merkeuzevragen.
 
 
 22/04/2026  vergeten om mijn logboek in te vullen en mijn oefeningens te pushen op github 
+23/04/2026 Documentatie van mijn Ionic Rent-a-Car versie bekeken om te zien wat ik moet reproduceren in Kotlin. 1.5
