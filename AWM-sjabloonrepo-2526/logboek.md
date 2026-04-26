@@ -138,3 +138,5 @@ de meeste punten verlies ik bij merkeuzevragen.
 23/04/2026 Documentatie van mijn Ionic Rent-a-Car versie bekeken om te zien wat ik moet reproduceren in Kotlin. 1.5
 
 24/04/2026 Backend op Combell getest, alles werkt nog. Plan gemaakt om 6 schermen te reproduceren. 1.0
+
+26/04/2026 Unit 5.1 herhaald (Retrofit, kotlinx.serialization, suspend functions, viewModelScope). 2.0
