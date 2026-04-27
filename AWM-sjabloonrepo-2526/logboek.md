@@ -140,3 +140,5 @@ de meeste punten verlies ik bij merkeuzevragen.
 24/04/2026 Backend op Combell getest, alles werkt nog. Plan gemaakt om 6 schermen te reproduceren. 1.0
 
 26/04/2026 Unit 5.1 herhaald (Retrofit, kotlinx.serialization, suspend functions, viewModelScope). 2.0
+
+27/04/2026 Stack voor mijn project gekozen: Compose BOM 2026, Retrofit 3.0, Firebase voor Google Sign-In, OSMDroid voor de kaart. 1.5
