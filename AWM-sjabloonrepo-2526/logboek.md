@@ -142,3 +142,9 @@ de meeste punten verlies ik bij merkeuzevragen.
 26/04/2026 Unit 5.1 herhaald (Retrofit, kotlinx.serialization, suspend functions, viewModelScope). 2.0
 
 27/04/2026 Stack voor mijn project gekozen: Compose BOM 2026, Retrofit 3.0, Firebase voor Google Sign-In, OSMDroid voor de kaart. 1.5
+
+
+## Week 12 :
+
+
+29/04/2026 Architectuur uitgewerkt op papier: lagenmodel uit Unit 4.1 (UI Layer met Composables + ViewModels, Data Layer met ApiService). 2.0
