@@ -148,3 +148,5 @@ de meeste punten verlies ik bij merkeuzevragen.
 
 
 29/04/2026 Architectuur uitgewerkt op papier: lagenmodel uit Unit 4.1 (UI Layer met Composables + ViewModels, Data Layer met ApiService). 2.0
+
+30/04/2026 Examenvragen voor mezelf voorbereid in NL: lifecycle, ViewModel, navigation, Retrofit. 2.0
