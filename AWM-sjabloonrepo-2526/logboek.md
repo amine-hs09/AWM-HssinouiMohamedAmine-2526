@@ -152,3 +152,5 @@ de meeste punten verlies ik bij merkeuzevragen.
 30/04/2026 Examenvragen voor mezelf voorbereid in NL: lifecycle, ViewModel, navigation, Retrofit. 2.0
 
 01/05/2026 Package structuur uitgetekend: model/, network/, auth/, data/, ui/{theme,home,login,locations,booking,rentals,profile,components}/. 1.0
+
+03/05/2026 Material 3 theme keuzes gemaakt: oranje #FF9500, zwart #121212 (zoals mijn Ionic versie). dynamicColor uit zodat de huisstijl behouden blijft. 1.5
