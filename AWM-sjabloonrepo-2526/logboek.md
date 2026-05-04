@@ -162,6 +162,16 @@ de meeste punten verlies ik bij merkeuzevragen.
 - AndroidManifest: INTERNET + ACCESS_NETWORK_STATE permissions.
 - 14 packages aangemaakt volgens architectuur.
 - MainActivity met volledige Activity Lifecycle, alle 7 callbacks met Log.d (pattern Dessert Clicker).
-- Eerste sync faalde door ontbrekende android.useAndroidX=true in gradle.properties — gefixed.
+- Eerste sync faalde door ontbrekende android.useAndroidX=true in gradle.properties ï¿½ gefixed.
 - Build SUCCESSFUL, app draait op Pixel 5 emulator.
 - Logcat bevestigt onCreate -> onStart -> onResume in juiste volgorde.
+
+
+## 04/05/2026 (3.5h)
+
+- Phase 1 : data classes (Agency, Car, CarType, Booking, BookingRequest, BookingResponse, DeleteBookingRequest)
+- Network layer Retrofit (RentACarApiService interface + RentACarApi singleton)
+- TestViewModel avec viewModelScope + try/catch IOException/HttpException
+- Fix dependance converter : passage de JakeWharton 1.0.0 vers Square officiel 3.0.0 (compatibilite Retrofit 3)
+- Test live emulateur reussi : 3 agences + 7 voitures recuperees depuis backend Combell
+- 26 questions Q&A preparees pour defense orale (Phase 0 + Phase 1)
