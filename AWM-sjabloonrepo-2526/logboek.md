@@ -167,11 +167,22 @@ de meeste punten verlies ik bij merkeuzevragen.
 - Logcat bevestigt onCreate -> onStart -> onResume in juiste volgorde.
 
 
-## 04/05/2026 (3.5h)
+## 04/05/2026 (5.5u)
 
-- Phase 1 : data classes (Agency, Car, CarType, Booking, BookingRequest, BookingResponse, DeleteBookingRequest)
-- Network layer Retrofit (RentACarApiService interface + RentACarApi singleton)
-- TestViewModel avec viewModelScope + try/catch IOException/HttpException
-- Fix dependance converter : passage de JakeWharton 1.0.0 vers Square officiel 3.0.0 (compatibilite Retrofit 3)
-- Test live emulateur reussi : 3 agences + 7 voitures recuperees depuis backend Combell
-- 26 questions Q&A preparees pour defense orale (Phase 0 + Phase 1)
+Fase 1 (3.5u) :
+- Data classes (Agency, Car, CarType, Booking, BookingRequest, BookingResponse, DeleteBookingRequest)
+- Network laag Retrofit (RentACarApiService interface + RentACarApi singleton)
+- TestViewModel met viewModelScope + try/catch IOException/HttpException
+- Fix dependency converter : van JakeWharton 1.0.0 naar officiele Square 3.0.0 (compatibel met Retrofit 3)
+- Live emulator test gelukt : 3 agencies + 7 cars opgehaald van Combell backend
+
+Fase 2 (2u) :
+- Firebase Console : project rentacar-odisee aangemaakt
+- Google Sign-In geactiveerd + SHA-1 debug opgehaald via gradle signingReport
+- google-services.json correct geplaatst in app/
+- Plugin google-services + dependencies Firebase Auth + kotlinx-coroutines-play-services
+- AuthManager singleton (suspend signInWithGoogle, signOut)
+- LoginViewModel met sealed LoginUiState (Idle/Loading/Success/Error)
+- LoginScreen Compose met Google knop en state management
+- Emulator test gelukt : Google login werkend met persoonlijk account
+
