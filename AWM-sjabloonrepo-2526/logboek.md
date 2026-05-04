@@ -154,3 +154,14 @@ de meeste punten verlies ik bij merkeuzevragen.
 01/05/2026 Package structuur uitgetekend: model/, network/, auth/, data/, ui/{theme,home,login,locations,booking,rentals,profile,components}/. 1.0
 
 03/05/2026 Material 3 theme keuzes gemaakt: oranje #FF9500, zwart #121212 (zoals mijn Ionic versie). dynamicColor uit zodat de huisstijl behouden blijft. 1.5
+
+04/05/2026 Phase 0: project setup. (3.0 uur)
+- Android Studio project aangemaakt (package com.hssinouimohamedamine.rentacar, minSdk 24).
+- libs.versions.toml en build.gradle.kts geconfigureerd.
+- network_security_config.xml voor cleartext HTTP (Combell heeft geen HTTPS).
+- AndroidManifest: INTERNET + ACCESS_NETWORK_STATE permissions.
+- 14 packages aangemaakt volgens architectuur.
+- MainActivity met volledige Activity Lifecycle, alle 7 callbacks met Log.d (pattern Dessert Clicker).
+- Eerste sync faalde door ontbrekende android.useAndroidX=true in gradle.properties — gefixed.
+- Build SUCCESSFUL, app draait op Pixel 5 emulator.
+- Logcat bevestigt onCreate -> onStart -> onResume in juiste volgorde.
